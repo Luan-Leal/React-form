@@ -1,0 +1,28 @@
+.button {
+    display: flex;
+    flex-direction: column;
+
+    margin: auto 5%;
+}
+
+.button button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: 40px;
+    width: 81px;
+    left: 670px;
+    top: 941px;
+    border-radius: 10px;
+    padding: 0px, 12px, 0px, 12px;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    background: #0DBDBD;
+    color: #E5E5E5;
+    border-radius: 10px;
+    border: none;
+}
