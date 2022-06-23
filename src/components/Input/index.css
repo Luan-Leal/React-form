@@ -1,0 +1,19 @@
+.input {
+    display: flex;
+    flex-direction: column;
+
+    margin: auto 5%;
+}
+
+.input label {
+    color: #767676;
+}
+
+.input input {
+    width: 100%;
+
+    border: 2px solid #AAAAAA;
+    border-radius: 4px;
+
+    padding: 1%;
+}
