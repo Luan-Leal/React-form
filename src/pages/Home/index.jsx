@@ -1,9 +1,8 @@
 import { useState } from 'react'
 
 import Input from "../../components/Input"
-
 import Button from "../../components/Button"
-
+import Checkbox from "../../components/Checkbox"
 
 
 function Home() {
@@ -14,6 +13,8 @@ function Home() {
       <Input />
       <br />
       <Button />
+      <br />
+      <Checkbox />
     </div>
   )
 }
