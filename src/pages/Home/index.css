@@ -1,0 +1,63 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ECEEF2;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 75%;
+}
+
+.HomeImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.HomeImage img {
+    width: auto;
+    height: 120px;
+    margin: 5% 0 2%;
+}
+
+.HomeImage p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.25em;
+    line-height: 24px;
+}
+
+.forms {
+    margin: 0 5%;
+}
+
+.two-form-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form1 {
+    width: 65%;
+}
+
+.form2 {
+    width: 25%;
+}
+
+.ButtonAndCheckbox {
+    display: flex;
+    justify-content: space-between;
+    margin: 6% 0 3%;
+}
+

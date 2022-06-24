@@ -1,8 +1,6 @@
 .button {
     display: flex;
     flex-direction: column;
-
-    margin: auto 5%;
 }
 
 .button button {
