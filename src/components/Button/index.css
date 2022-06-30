@@ -20,8 +20,38 @@
     font-weight: 400;
 
     background: #0DBDBD;
+    text-decoration: none;
     color: #E5E5E5;
     border-radius: 10px;
     border: none;
     cursor: pointer;
+
 }
+
+
+.buttonSucess button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: 177px;
+    width: 269px;
+    left: 378px;
+    top: 654px;
+    border-radius: 10px;
+    padding: 0px, 12px, 0px, 12px;
+    
+
+    font-size: 2em;
+    font-weight: 400;
+
+    background: #0DBDBD;
+    text-decoration: none;
+    color: #E5E5E5;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+}
+
