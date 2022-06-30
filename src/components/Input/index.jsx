@@ -1,12 +1,19 @@
-import { useState } from 'react'
-
+import React from "react";
 import "./index.css"
 
-function Input() {
+
+function Input({ label, placeholder, name, value, setValue, ...props}) {
+
   return (
     <div className="input">
-      <label htmlFor="">Label</label>
-      <input type="text" placeholder='Placeholder' />
+      <label>{label}</label>
+      <input 
+      placeholder={placeholder} 
+      name={name} 
+      value={value}
+      onChange={({target}) => setValue(target.value)}
+      {...props}
+      />
     </div>
   )
 }

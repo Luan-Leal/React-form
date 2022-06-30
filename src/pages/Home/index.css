@@ -61,3 +61,8 @@ main {
     margin: 6% 0 3%;
 }
 
+.error {
+    font-size: 0.875em;
+    color: #FF4B4B;
+}
+

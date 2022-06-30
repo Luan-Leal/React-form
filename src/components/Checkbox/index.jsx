@@ -1,12 +1,12 @@
 import "./index.css"
 
-function Checkbox() {
+function Checkbox(props) {
   return (
-    <div class="control-group">
-        <label class="control control-checkbox">
-            <p>Label</p>
+    <div className="control-group">
+        <label className="control control-checkbox">
+            <p>{props.label}</p>
             <input type="checkbox" />
-            <div class="control_indicator"></div>
+            <div className="control_indicator"></div>
         </label>
     </div>
   )
