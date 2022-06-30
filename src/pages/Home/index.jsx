@@ -1,22 +1,27 @@
-import  React, { useState } from 'react'
+import {React , useState} from "react"
+import{useNavigate} from "react-router-dom"
+
+
 import Input from "../../components/Input"
 import Button from "../../components/Button"
 import Checkbox from "../../components/Checkbox"
 
-import "./index.css"
+import "./home.css"
 import Imagem from "../../assets/data.png"
 
 
 
 const Home = () => {
-  const [name, setName] = React.useState("")
-  const [email, setEmail] = React.useState("")
-  const [password, setPassword] = React.useState("")
-  const [age, setAge] = React.useState("")
-  const [errorName, setErrorName] = React.useState(null)
-  const [errorEmail, setErrorEmail] = React.useState(null)
-  const [errorPassword, setErrorPassword] = React.useState(null)
-  const [errorPhone, setErrorPhone] = React.useState(null)
+  const nav = useNavigate()
+  const [name, setName] = useState("")
+  const [email, setEmail] =useState("")
+  const [password, setPassword] = useState("")
+  const [phone, setPhone] = useState("")
+  const [age, setAge] = useState("")
+  const [errorName, setErrorName] = useState(null)
+  const [errorEmail, setErrorEmail] = useState(null)
+  const [errorPassword, setErrorPassword] = useState(null)
+  const [errorPhone, setErrorPhone] = useState(null)
 
   function handleSubmit(event) {
     event.preventDefault()
@@ -74,8 +79,9 @@ const Home = () => {
 
   
   function validatePhone(value) {
-    if (value.length === 0){
-      setErrorPhone("Preencha um valor")
+    const regex = (/\d{2}\d{5}-?\d{4}/)
+    if (!regex){
+      console.log("erro")
       return false
     } else if (! /\d{2}\d{5}-?\d{4}/.test(value)){
       setErrorPhone("123")
@@ -83,6 +89,7 @@ const Home = () => {
     } else {
       setErrorPhone(null);
       return true
+      
     }
   }
   function handleBlurPhone({target}) {
@@ -90,6 +97,16 @@ const Home = () => {
   }
 
 
+   const handleValidate = () => {
+    if (name && email && password && phone) {
+      console.log("logou")
+      nav("/sucess")
+    }else{
+      console.log("não logou")
+    } 
+  }
+
+  console.log(name, email, password, phone )
   return (
     <main>
       <section className='container'>
@@ -132,6 +149,8 @@ const Home = () => {
               id="phone"
               placeholder="(83) 00000-0000" 
               name="phone"
+              value={phone}
+              setValue={setPhone}
               onBlur={handleBlurPhone}
               />
               {errorPhone && <span className='error'>Phone Invalid</span>}
@@ -167,12 +186,10 @@ const Home = () => {
             <div>
               <Checkbox label="I accept the terms and privacy"/>
             </div>
-            <Button text="Register" type="text"/>
+            <Button className="button" text="Register" type="text" onClick={handleValidate}/>
           </div>
         </form>
-
       </section>
-
     </main>
   )
 }
