@@ -118,70 +118,36 @@ const Home = () => {
       
         <form onSubmit={handleSubmit} className="forms">
           <div className='one-form-inline'>
-
-            <Input label="Full Name *" 
-            id="name"
-            placeholder="Name" 
-            name="name"
-            type="text"
-            value={name}
-            setValue={setName}
-            onBlur={handleBlurName}
-            />
+            <Input label="Full Name *" id="name" placeholder="Name"name="name"type="text"value={name}setValue={setName}onBlur={handleBlurName}/>
             {errorName && <span className='error'>Fullname Invalid</span>}
           </div>
+          <div className="form-input">
+            <div className="inline1">
+              <div className='email'>
+                <Input label="Email *" id="email" placeholder="foo@bar.com" name="email" value={email} setValue={setEmail} onBlur={handleBlurEmail}/>
+                {errorEmail && <span className='error'>Email Invalid</span>}
+              </div>
 
-          <div className='two-form-inline'>
-            <div className='form1'>
-              <Input label="Email *" 
-              id="email"
-              placeholder="foo@bar.com" 
-              name="email"
-              value={email}
-              setValue={setEmail}
-              onBlur={handleBlurEmail}
-              />
-              {errorEmail && <span className='error'>Email Invalid</span>}
+              <div className='password'>
+                <Input label="Password *" id="password" placeholder="" name="password" value={password} setValue={setPassword} onBlur={handleBlurPassword}/>
+                {errorPassword && <span className='error'>Password Invalid</span>}
+              </div>
             </div>
-
-            <div className='form2'>
-              <Input label="Phone" 
-              id="phone"
-              placeholder="(83) 00000-0000" 
-              name="phone"
-              value={phone}
-              setValue={setPhone}
-              onBlur={handleBlurPhone}
-              />
+            <div className="inline2">
+              <div className='phone'>
+              <Input label="Phone" id="phone" placeholder="(83) 00000-0000" name="phone" value={phone} setValue={setPhone} onBlur={handleBlurPhone}/>
               {errorPhone && <span className='error'>Phone Invalid</span>}
             </div>
-          </div>
 
-          <div className='two-form-inline'>
-            <div className='form1'>
-              <Input label="Password *"
-              id="password" 
-              placeholder="" 
-              name="password"
-              value={password}
-              setValue={setPassword}
-              onBlur={handleBlurPassword}
+            <div className='birthday'>
+              <Input label="Birthday *" id="password" placeholder="yyyy/mm/dd" name="age" value={age} setValue={setAge}
               />
-              {errorPassword && <span className='error'>Password Invalid</span>}
-            </div>
-
-            <div className='form2'>
-              <Input label="Birthday *"
-              id="password" 
-              placeholder="yyyy/mm/dd" 
-              name="age"
-              value={age}
-              setValue={setAge}
-              />
-
             </div>
           </div>
+          
+          </div>
 
+        
           <div className='ButtonAndCheckbox'>
             <div>
               <Checkbox label="I accept the terms and privacy"/>
