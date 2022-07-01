@@ -186,7 +186,9 @@ const Home = () => {
             <div>
               <Checkbox label="I accept the terms and privacy"/>
             </div>
-            <Button className="button" text="Register" type="text" onClick={handleValidate}/>
+            <div className="button">
+              <Button text="Register" type="text" onClick={handleValidate}/>
+            </div>
           </div>
         </form>
       </section>

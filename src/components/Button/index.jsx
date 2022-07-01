@@ -1,10 +1,6 @@
 import "./index.css"
+import style from "styled-components"
 
-const linkStyle = {
-  margin: "1rem",
-  textDecoration: "none",
-  color: 'white'
-};
 
 function Button(props) {
   return (
