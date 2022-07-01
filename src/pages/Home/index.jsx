@@ -130,8 +130,7 @@ const Home = () => {
             />
             {errorName && <span className='error'>Fullname Invalid</span>}
           </div>
-
-          <div className='two-form-inline'>
+          <div className='two-form-column'>
             <div className='form1'>
               <Input label="Email *" 
               id="email"
@@ -144,20 +143,6 @@ const Home = () => {
               {errorEmail && <span className='error'>Email Invalid</span>}
             </div>
 
-            <div className='form2'>
-              <Input label="Phone" 
-              id="phone"
-              placeholder="(83) 00000-0000" 
-              name="phone"
-              value={phone}
-              setValue={setPhone}
-              onBlur={handleBlurPhone}
-              />
-              {errorPhone && <span className='error'>Phone Invalid</span>}
-            </div>
-          </div>
-
-          <div className='two-form-inline'>
             <div className='form1'>
               <Input label="Password *"
               id="password" 
@@ -168,6 +153,21 @@ const Home = () => {
               onBlur={handleBlurPassword}
               />
               {errorPassword && <span className='error'>Password Invalid</span>}
+            </div>
+          </div>
+
+          <div className='two-form-inline'>
+
+            <div className='form2'>
+              <Input label="Phone" 
+              id="phone"
+              placeholder="(83) 00000-0000" 
+              name="phone"
+              value={phone}
+              setValue={setPhone}
+              onBlur={handleBlurPhone}
+              />
+              {errorPhone && <span className='error'>Phone Invalid</span>}
             </div>
 
             <div className='form2'>
