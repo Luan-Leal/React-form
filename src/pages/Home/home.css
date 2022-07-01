@@ -70,49 +70,81 @@ main {
 }
 
 .forms {
+    display: flex;
+    justify-content: first baseline;
+    flex-direction: column;
     margin: 0 5%;
 }
 
-.two-form-inline {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+.email {
+    width: 90%;
 }
 
-@media (max-width: 768px) {
-    .two-form-column {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-    }
-    
-    .two-form-inline {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-    }
-    
-    .form1 {
-        width: 100%;
-    }
-    
-    .form2 {
-        width: 40%;
-    }
-    
-}
-
-
-.form1 {
+.phone {
     width: 100%;
 }
 
-.form2 {
-    width: 45%;
+.password {
+    width: 90%;
 }
+
+.birthday {
+    width: 100%;
+}
+
+.form-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inline1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inline2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+
+    .email {
+        width: 100%;
+    }
+    
+    .phone {
+        width: 45%;
+    }
+    
+    .password {
+        width: 100%;
+    }
+    
+    .birthday {
+        width: 45%;
+    }
+    
+    .form-input {
+        display: block;
+        justify-content: space-between;
+    }
+
+    .inline1 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .inline2 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+
 
 
 .ButtonAndCheckbox {
