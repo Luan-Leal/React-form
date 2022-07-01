@@ -1,9 +1,12 @@
+import { Link } from 'react-router-dom';
+
 import Imagem from "../../assets/data.png"
 import Button from "../../components/Button"
 
 import "./sucess.css"
 
 function Sucess() {
+
 
   return (
     <main className="sucess">
@@ -12,8 +15,10 @@ function Sucess() {
           <img src={ Imagem} alt="" />
            <h1>Sucesss!</h1>
         </div>
-        <div >
-          <Button className="buttonSucess" text="Go Back!" link="/" />
+        <div className="buttonSucess">
+        <Link className='linkStyle' to="/">
+          <Button text="Go Back!" />
+        </Link>
         </div>
       </div>
     </main>
